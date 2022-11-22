@@ -6,7 +6,7 @@
 /*   By: tbourdea <tbourdea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:53:43 by tbourdea          #+#    #+#             */
-/*   Updated: 2022/11/21 10:59:28 by tbourdea         ###   ########.fr       */
+/*   Updated: 2022/11/22 17:08:51 by tbourdea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	if (!s && c != 0)
 		return (NULL);
 	size = ft_strlen(s);
-	while ((unsigned char)s[size] != (unsigned char)c && size >= 0)
+	while (size >= 0 && (unsigned char)s[size] != (unsigned char)c)
 		size--;
 	if (size < 0)
 		return (NULL);
@@ -28,10 +28,10 @@ char	*ft_strrchr(const char *s, int c)
 
 // int	main(void)
 // {
-// 	// char	*empty = (char *)calloc(1, 1);
-// 	printf("Man fonction : %s\n", strrchr("Vivre", 'V'));
-// 	printf("Ma fonction : %s\n", ft_strrchr("", 'V'));
-// 	// free(empty);
+// 	char	*empty = (char *)calloc(1, 1);
+// 	printf("Man fonction : %s\n", strrchr(empty, 'V'));
+// 	printf("Ma fonction : %s\n", ft_strrchr(empty, 'V'));
+// 	free(empty);
 // 	return (0);
 // }
-//Finit.
+// Finit.
