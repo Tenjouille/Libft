@@ -6,7 +6,7 @@
 /*   By: tbourdea <tbourdea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:05:35 by tbourdea          #+#    #+#             */
-/*   Updated: 2022/11/21 10:00:22 by tbourdea         ###   ########.fr       */
+/*   Updated: 2022/11/24 09:39:46 by tbourdea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
 
-	if (size && !((nmemb * size) / size))
+	if (nmemb > 0 && ((size_t) - 1) / nmemb < size)
 		return (NULL);
 	p = malloc(size * nmemb);
 	if (!p)
